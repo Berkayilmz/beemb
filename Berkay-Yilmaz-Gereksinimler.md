@@ -1,0 +1,1 @@
+Berkay Yılmaz Gereksinimleri:
