@@ -1,2 +1,2 @@
 Proje Planı:
-![Proje Planı](GanttChart.png)
+![Proje Planı](Proje-Fotoğraflari/GanttChart.png)

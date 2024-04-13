@@ -27,6 +27,6 @@
 <h3>Gereksinim Dağılımları</h3>
 ------------------------------------------------------------------
 
-1. [Berkay Yılmaz Gereksinimleri](Berkay-Yilmaz-Gereksinimler.md)
+1. [Berkay Yılmaz Gereksinimleri](Gereksinim-Analizleri/Berkay-Yilmaz-Gereksinimler.md)
 
-2. [Mehmet Emre Arıcan'ın Gereksinimleri](Mehmet-Emre-Arican-Gereksinimler.md)
+2. [Mehmet Emre Arıcan'ın Gereksinimleri](Gereksinim-Analizleri/Mehmet-Emre-Arican-Gereksinimler.md)
