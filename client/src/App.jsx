@@ -17,7 +17,6 @@ const App = () => {
       <Categories />
       <Products/>
       <Campaigns/>
-      <Products/>
       <Policy />
       <CampaignSingle/>
       <Footer />
