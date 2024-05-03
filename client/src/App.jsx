@@ -6,7 +6,7 @@ import Slider from './components/Slider/sliders';
 import Categories from './components/Categories/categories'
 import Products from './components/Products/products'
 import CampaignSingle from "./components/CampaignSingle/campaignSingle";
-import Campaigns from './components/Campaigns/campaings';
+import Campaigns from './components/Campaigns/campaigns';
 
 
 const App = () => {
