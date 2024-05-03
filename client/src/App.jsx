@@ -5,6 +5,9 @@ import Policy from './components/Layout/Policy/policy';
 import Slider from './components/Slider/sliders';
 import Categories from './components/Categories/categories'
 import Products from './components/Products/products'
+import CampaignSingle from "./components/CampaignSingle/campaignSingle";
+import Campaigns from './components/Campaigns/campaings';
+
 
 const App = () => {
   return (
@@ -13,7 +16,10 @@ const App = () => {
       <Slider />
       <Categories />
       <Products/>
+      <Campaigns/>
+      <Products/>
       <Policy />
+      <CampaignSingle/>
       <Footer />
     </>
   )
