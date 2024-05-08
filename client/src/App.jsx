@@ -1,15 +1,19 @@
-import React from 'react';
-import Home from "./pages/Home"
-import Shop from './pages/Shop';
-
+import React from "react";
+//import Home from "./pages/Home";
+//import ShopPage from "./pages/ShopPage";
+import "./App.css";
+import ContactPage from "./pages/ContactPage";
 
 const App = () => {
   return (
     <>
-      <Home />
-      <Shop />
+      <React.Fragment>
+        {/* <Home /> */}
+        {/* <ShopPage /> */}
+        <ContactPage />
+      </React.Fragment>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

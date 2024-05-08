@@ -1,4 +1,4 @@
-import campaignItem from "./campaignItem";
+import CampaignItem from "./campaignItem";
 import "./campaigns.css";
 
 const campaigns = () => {
@@ -6,12 +6,12 @@ const campaigns = () => {
     <section className="campaigns">
       <div className="container">
         <div className="campaigns-wrapper">
-          <campaignItem />
-          <campaignItem />
+          <CampaignItem />
+          <CampaignItem />
         </div>
         <div className="campaigns-wrapper">
-          <campaignItem />
-          <campaignItem />
+          <CampaignItem />
+          <CampaignItem />
         </div>
       </div>
     </section>
