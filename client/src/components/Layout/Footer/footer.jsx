@@ -1,9 +1,11 @@
 import React from 'react'
 import './footer.css'
+import Policy from '../Policy/policy'
 
 const footer = () => {
     return (
         <>
+            <Policy/>
             <footer className="footer">
                 <div className="subscribe-row">
                     <div className="container">

@@ -3,6 +3,8 @@ import React from "react";
 //import ShopPage from "./pages/ShopPage";
 import "./App.css";
 import ContactPage from "./pages/ContactPage";
+import Auth from "./components/Auth/Auth";
+import AuthPage from "./pages/AuthPage";
 
 const App = () => {
   return (
@@ -10,7 +12,8 @@ const App = () => {
       <React.Fragment>
         {/* <Home /> */}
         {/* <ShopPage /> */}
-        <ContactPage />
+        {/* <ContactPage /> */}
+        <AuthPage/>
       </React.Fragment>
     </>
   );

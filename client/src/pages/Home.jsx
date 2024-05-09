@@ -17,7 +17,6 @@ const Home = () => {
             <Products />
             <Campaigns />
             <Products/>
-            <Policy />
             <CampaignSingle />
             <Footer />
         </>
