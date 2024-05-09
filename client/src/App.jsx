@@ -5,6 +5,7 @@ import "./App.css";
 import ContactPage from "./pages/ContactPage";
 import Auth from "./components/Auth/Auth";
 import AuthPage from "./pages/AuthPage";
+import CartPage from "./pages/CartPage";
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
         {/* <Home /> */}
         {/* <ShopPage /> */}
         {/* <ContactPage /> */}
-        <AuthPage/>
+        {/* <AuthPage/> */}
+        <CartPage/>
       </React.Fragment>
     </>
   );
