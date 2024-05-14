@@ -7,6 +7,7 @@ import Auth from "./components/Auth/Auth";
 import AuthPage from "./pages/AuthPage";
 import CartPage from "./pages/CartPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
+import Reviews from "./components/Reviews/Reviews";
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
         {/* <ContactPage /> */}
         {/* <AuthPage/> */}
         {/* <CartPage/>  */}
-        <ProductDetailsPage />
+         <ProductDetailsPage /> 
+       
       </React.Fragment>
     </>
   );

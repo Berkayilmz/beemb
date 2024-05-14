@@ -1,4 +1,4 @@
-import Reviews from "../../Reviews/reviews";
+import Reviews from "../../Reviews/Reviews";
 import "./tabs.css";
 
 const tabs = () => {
