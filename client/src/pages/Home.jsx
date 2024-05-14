@@ -11,14 +11,12 @@ import Campaigns from '../components/Campaigns/campaigns';
 const Home = () => {
     return (
         <>
-            <Header />
             <Slider />
             <Categories />
             <Products />
             <Campaigns />
             <Products/>
             <CampaignSingle />
-            <Footer />
         </>
     )
 }

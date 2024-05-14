@@ -8,12 +8,10 @@ import Footer from "../components/Layout/Footer/footer"
 const ShopPage = () => {
   return (
     <Fragment>
-      <Header />
       <Categories />
       <Products />
       <CampainSingle />
       <Products />
-      <Footer />
     </Fragment>
   );
 };

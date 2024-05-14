@@ -6,9 +6,7 @@ import Contact from "../components/Contact/contact";
 const ContactPage = () => {
   return (
     <React.Fragment>
-      <Header />
       <Contact />
-      <Footer />
     </React.Fragment>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
-//import Home from "./pages/Home";
-//import ShopPage from "./pages/ShopPage";
+import Home from "./pages/Home";
+import ShopPage from "./pages/ShopPage";
 import "./App.css";
 import ContactPage from "./pages/ContactPage";
 import Auth from "./components/Auth/Auth";
@@ -19,7 +19,7 @@ const App = () => {
         {/* <ContactPage /> */}
         {/* <AuthPage/> */}
         {/* <CartPage/>  */}
-         <ProductDetailsPage />  
+         {/* <ProductDetailsPage />   */}
 
       </React.Fragment>
     </>

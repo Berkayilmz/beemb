@@ -6,9 +6,7 @@ import Footer from "../components/Layout/Footer/footer";
 const ProductDetailsPage = () => {
   return (
     <Fragment>
-      <Header />
       <ProductDetails />
-      <Footer />
     </Fragment>
   );
 };

@@ -7,9 +7,7 @@ import Footer from '../components/Layout/Footer/footer'
 const AuthPage = () => {
     return (
         <>
-            <Header />
             <Auth />
-            <Footer />
         </>
     )
 }
