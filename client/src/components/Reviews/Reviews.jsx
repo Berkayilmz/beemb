@@ -6,15 +6,15 @@ import ReviewItem from './ReviewItem'
 const Reviews = () => {
     return (
         <>
-            <div class="tab-panel-reviews">
+            <div className="tab-panel-reviews">
                 <h3>2 reviews for Basic Colored Sweatpants With Elastic Hems</h3>
-                <div class="comments">
-                    <ol class="comment-list">
+                <div className="comments">
+                    <ol className="comment-list">
                         <ReviewItem/>
                     </ol>
                 </div>
                 
-                <div class="review-form-wrapper">
+                <div className="review-form-wrapper">
                     <h2>Add a review</h2>
                     <ReviewForm/>
                 </div>
