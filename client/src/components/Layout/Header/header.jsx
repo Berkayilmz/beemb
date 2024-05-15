@@ -1,9 +1,16 @@
 import React from 'react'
 import './header.css'
+import { IoPersonOutline } from "react-icons/io5";
+import { IoIosSearch } from "react-icons/io";
+import { IoMdHeartEmpty } from "react-icons/io";
 
-const header = () => {
+const header = ({setIsSearchShow}) => {
+
+    const handleSubmit = () => {
+        setIsSearchShow(true)
+    }
+
     return (
-
         <header>
             <div className="global-notification">
                 <div className="container">
@@ -178,13 +185,13 @@ const header = () => {
                         <div className="header-right">
                             <div className="header-right-links">
                                 <a href="account.html" className="header-account">
-                                    <i className="bi bi-person"></i>
+                                    <i><IoPersonOutline /></i>
                                 </a>
-                                <button className="search-button">
-                                    <i className="bi bi-search"></i>
+                                <button className="search-button" onClick={handleSubmit}>
+                                    <i><IoIosSearch /></i>
                                 </button>
                                 <a href="#">
-                                    <i className="bi bi-heart"></i>
+                                    <i><IoMdHeartEmpty /></i>
                                 </a>
                                 <div className="header-cart">
                                     <a href="cart.html" className="header-cart-link">

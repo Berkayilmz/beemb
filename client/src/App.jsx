@@ -18,9 +18,9 @@ const App = () => {
         {/* <ShopPage /> */}
         {/* <ContactPage /> */}
         {/* <AuthPage/> */}
-        {/* <CartPage/>  */}
+        <CartPage/> 
          {/* <ProductDetailsPage />   */}
-
+      
       </React.Fragment>
     </>
   );
