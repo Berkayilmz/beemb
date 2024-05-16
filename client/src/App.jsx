@@ -8,18 +8,19 @@ import AuthPage from "./pages/AuthPage";
 import CartPage from "./pages/CartPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import Reviews from "./components/Reviews/Reviews";
+import Dialog from "./components/Modals/Dialog/Dialog";
 
 
 const App = () => {
   return (
     <>
       <React.Fragment>
-        {/* <Home /> */}
+        <Home />
         {/* <ShopPage /> */}
         {/* <ContactPage /> */}
         {/* <AuthPage/> */}
-        <CartPage/> 
-         {/* <ProductDetailsPage />   */}
+        {/* <CartPage/>  */}
+        {/* <ProductDetailsPage />    */}
       
       </React.Fragment>
     </>

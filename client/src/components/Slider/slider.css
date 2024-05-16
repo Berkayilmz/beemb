@@ -54,6 +54,9 @@
   background-color: white;
   opacity: 0.5;
   transition: 0.2s ease all;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .slider-buttons button:hover {
@@ -63,9 +66,6 @@
   border-color: #1367ef;
 }
 
-.slider-buttons button i {
-  font-size: 30px;
-}
 
 .slider .slider-dots {
   position: absolute;
