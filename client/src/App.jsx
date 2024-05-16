@@ -15,12 +15,12 @@ const App = () => {
   return (
     <>
       <React.Fragment>
-        <Home />
+        {/* <Home /> */}
         {/* <ShopPage /> */}
         {/* <ContactPage /> */}
         {/* <AuthPage/> */}
         {/* <CartPage/>  */}
-        {/* <ProductDetailsPage />    */}
+        <ProductDetailsPage />   
       
       </React.Fragment>
     </>

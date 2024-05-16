@@ -29,8 +29,7 @@ const info = () => {
         <strong className="new-price">$100</strong>
       </div>
       <p className="product-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        Summary Description for the product
       </p>
       <form className="variations-form">
         <div className="variations">

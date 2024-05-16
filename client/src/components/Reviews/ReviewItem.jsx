@@ -32,8 +32,7 @@ const ReviewItem = () => {
                         <time>April 23, 2022</time>
                     </div>
                     <div className="comment-description">
-                        <p>Sed perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium.</p>
+                        <p>Product Review</p>
                     </div>
                 </div>
             </li>
