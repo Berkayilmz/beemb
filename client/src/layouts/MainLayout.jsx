@@ -19,7 +19,7 @@ const MainLayout = (props) => {
 
   return (
     <div className='main-layout'>
-      <Dialog isDialogShow={isDialogShow} setIsDialogShow={setIsDialogShow}/>
+      {/* <Dialog isDialogShow={isDialogShow} setIsDialogShow={setIsDialogShow}/> */}
       <Search isSearchShow={isSearchShow} setIsSearchShow={setIsSearchShow} />
       <Header setIsSearchShow={setIsSearchShow} />
       {props.children}

@@ -10,7 +10,6 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import Reviews from "./components/Reviews/Reviews";
 import Dialog from "./components/Modals/Dialog/Dialog";
 
-
 const App = () => {
   return (
     <>
@@ -19,9 +18,8 @@ const App = () => {
         {/* <ShopPage /> */}
         {/* <ContactPage /> */}
         {/* <AuthPage/> */}
-        {/* <CartPage/>  */}
-        <ProductDetailsPage />   
-      
+        <CartPage/> 
+        {/* <ProductDetailsPage /> */}
       </React.Fragment>
     </>
   );
