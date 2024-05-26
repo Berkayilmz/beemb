@@ -8,6 +8,8 @@ import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { BsBasket2Fill } from "react-icons/bs";
 import { GoHeartFill } from "react-icons/go";
 import { BsFillShareFill } from "react-icons/bs";
+import { AiFillEye } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const productItem = ({ productItem }) => {
   const { cartItems, addToCart } = useContext(CartContext);
@@ -18,10 +20,10 @@ const productItem = ({ productItem }) => {
   return (
     <div className="product-item glide__slide glide__slide--active">
       <div className="product-image">
-        <a href="#">
+        <Link to={`product/${productItem.id}`} className="product-link">
           <img src={productItem.img.singleImage} alt="" className="img1" />
           <img src={productItem.img.thumbs[1]} alt="" className="img2" />
-        </a>
+        </Link>
       </div>
       <div className="product-info">
         <a href="$" className="product-title">

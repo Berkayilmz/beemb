@@ -6,13 +6,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './index.css'
 import CartProvider from "./components/context/cartProvider.jsx";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <BrowserRouter>
     <CartProvider>
-    <MainLayout>
-      <App />
-    </MainLayout>
+      <MainLayout>
+        <App />
+      </MainLayout>
     </CartProvider>
-  </React.StrictMode>,
+  </BrowserRouter>
+
 )
