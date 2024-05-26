@@ -214,9 +214,7 @@ const header = ({ setIsSearchShow }) => {
                   </li>
                 </ul>
               </nav>
-              <i>
-                <BiXCircle id="close-sidebar" />
-              </i>
+              
             </div>
             <div className="header-right">
               <div className="header-right-links">
