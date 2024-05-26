@@ -1,5 +1,9 @@
 import "./info.css";
-
+import { BiGlobe } from "react-icons/bi";
+import { BiHeart } from "react-icons/bi";
+import { BiShare } from "react-icons/bi";
+import { GoStarFill } from "react-icons/go";
+import { FaRegStarHalfStroke } from "react-icons/fa6";
 const info = () => {
   return (
     <div className="product-info">
@@ -7,19 +11,29 @@ const info = () => {
       <div className="product-review">
         <ul className="product-star">
           <li>
-            <i className="bi bi-star-fill"></i>
+            <i>
+              <GoStarFill />
+            </i>
           </li>
           <li>
-            <i className="bi bi-star-fill"></i>
+            <i>
+              <GoStarFill />
+            </i>
           </li>
           <li>
-            <i className="bi bi-star-fill"></i>
+            <i>
+              <GoStarFill />
+            </i>
           </li>
           <li>
-            <i className="bi bi-star-fill"></i>
+            <i>
+              <GoStarFill />
+            </i>
           </li>
           <li>
-            <i className="bi bi-star-half"></i>
+            <i>
+              <FaRegStarHalfStroke />
+            </i>
           </li>
         </ul>
         <span>2 reviews</span>
@@ -28,9 +42,7 @@ const info = () => {
         <s className="old-price">$165</s>
         <strong className="new-price">$100</strong>
       </div>
-      <p className="product-description">
-        Summary Description for the product
-      </p>
+      <p className="product-description">Summary Description for the product</p>
       <form className="variations-form">
         <div className="variations">
           <div className="colors">
@@ -84,15 +96,21 @@ const info = () => {
           </div>
           <div className="product-extra-buttons">
             <a href="#">
-              <i className="bi bi-globe"></i>
+              <i>
+                <BiGlobe />
+              </i>
               <span>Size Guide</span>
             </a>
             <a href="#">
-              <i className="bi bi-heart"></i>
+              <i>
+                <BiHeart />
+              </i>
               <span>Add to Wislist</span>
             </a>
             <a href="#">
-              <i className="bi bi-share"></i>
+              <i>
+                <BiShare />
+              </i>
               <span>Share this Product</span>
             </a>
           </div>

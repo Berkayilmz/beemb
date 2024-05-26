@@ -1,4 +1,5 @@
 import "./campaignItem.css";
+import { BiRightArrowAlt } from "react-icons/bi";
 
 const campaignItem = () => {
   return (
@@ -13,7 +14,9 @@ const campaignItem = () => {
       </p>
       <a href="#" className="btn btn-primary">
         View All
-        <i className="bi bi-arrow-right"></i>
+        <i>
+          <BiRightArrowAlt />
+        </i>
       </a>
     </div>
   );

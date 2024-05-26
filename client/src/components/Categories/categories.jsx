@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import "./categories.css";
 import CategoryItem from "./categoryItem";
 
+
 const categories = () => {
   return (
     <>

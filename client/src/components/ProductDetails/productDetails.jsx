@@ -12,12 +12,12 @@ const productDetails = () => {
           <Breadcrumb />
           <div className="single-content">
             <main className="site-main">
-              <Gallery/>
-              <Info/>
+              <Gallery />
+              <Info />
             </main>
           </div>
-            <Tabs/>
-        </div>  
+          <Tabs />
+        </div>
       </div>
     </section>
   );

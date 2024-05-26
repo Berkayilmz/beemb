@@ -1,21 +1,24 @@
-import "./campaignSingle.css"
+import "./campaignSingle.css";
+import { FaArrowRight } from "react-icons/fa6";
 
 const campaignSingle = () => {
   return (
     <section className="campaign-single">
-    <div className="container">
-      <div className="campaign-wrapper">
-        <h2>New Season Sale</h2>
-        <strong>40% OFF</strong>
-        <span></span>
-        <a href="#" className="btn btn-lg">
-          SHOP NOW
-          <i className="bi bi-arrow-right"></i>
-        </a>
+      <div className="container">
+        <div className="campaign-wrapper">
+          <h2>New Season Sale</h2>
+          <strong>40% OFF</strong>
+          <span></span>
+          <a href="#" className="btn btn-lg">
+            SHOP NOW
+            <i>
+              <FaArrowRight />
+            </i>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
-  )
-}
+    </section>
+  );
+};
 
-export default campaignSingle
+export default campaignSingle;

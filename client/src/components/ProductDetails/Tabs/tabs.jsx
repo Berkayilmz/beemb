@@ -3,7 +3,6 @@ import Reviews from "../../Reviews/Reviews";
 import "./tabs.css";
 
 const tabs = () => {
-
   const [activeTab, setActiveTab] = useState("desc");
 
   const handleTabClick = (e, tab) => {
@@ -43,16 +42,21 @@ const tabs = () => {
         </li>
       </ul>
       <div className="tab-panel">
-        <div className={`tab-panel-descriptions content ${activeTab === "desc" ? "active" : ""}`}>
-          <p>
-            Product Description 1
-          </p>
+        <div
+          className={`tab-panel-descriptions content ${
+            activeTab === "desc" ? "active" : ""
+          }`}
+        >
+          <p>Product Description 1</p>
           <br />
-          <p>
-            Product Description 2
-          </p>
+          <p>Product Description 2</p>
         </div>
-        <div className={`tab-panel-information content ${activeTab === "info" ? "active" : ""}`} id="info">
+        <div
+          className={`tab-panel-information content ${
+            activeTab === "info" ? "active" : ""
+          }`}
+          id="info"
+        >
           <h3>Additional information</h3>
           <table>
             <tbody>

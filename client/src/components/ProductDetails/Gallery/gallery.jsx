@@ -9,7 +9,6 @@ import "./gallery.css";
 function PrevBtn({ onClick }) {
   return (
     <button
-      
       className="glide__arrow glide__arrow--left"
       data-glide-dir="<"
       onClick={onClick}
@@ -17,7 +16,9 @@ function PrevBtn({ onClick }) {
         zIndex: "2",
       }}
     >
-      <i><BsChevronLeft /></i>
+      <i>
+        <BsChevronLeft />
+      </i>
     </button>
   );
 }
@@ -32,7 +33,9 @@ function NextBtn({ onClick }) {
         zIndex: "2",
       }}
     >
-      <i><BsChevronRight /></i>
+      <i>
+        <BsChevronRight />
+      </i>
     </button>
   );
 }
@@ -45,9 +48,7 @@ PrevBtn.propTypes = {
   onClick: PropTypes.func,
 };
 
-
 const gallery = () => {
-
   const [activeImg, setActiveImg] = useState({
     img: productsData[0].img.singleImage,
     imgIndex: 0,
@@ -70,7 +71,7 @@ const gallery = () => {
       <div className="product-thumb">
         <div className="glide__track" data-glide-el="track">
           <ol className="gallery-thumbs glide__slides">
-          <Slider {...sliderSettings}>
+            <Slider {...sliderSettings}>
               {productsData[0].img.thumbs.map((itemImg, index) => (
                 <li
                   className="glide__slide glide__slide--active"
@@ -86,9 +87,7 @@ const gallery = () => {
                     src={itemImg}
                     alt=""
                     className={`img-fluid ${
-                      activeImg.imgIndex === index
-                        ? "active"
-                        : ""
+                      activeImg.imgIndex === index ? "active" : ""
                     } `}
                   />
                 </li>

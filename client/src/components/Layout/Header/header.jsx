@@ -5,6 +5,10 @@ import { IoIosSearch } from "react-icons/io";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { useContext } from "react";
 import { CartContext } from "../../context/cartProvider";
+import { BiListUl } from "react-icons/bi";
+import { BiSolidChevronDown } from "react-icons/bi";
+import { BiXCircle } from "react-icons/bi";
+import { BiShoppingBag } from "react-icons/bi";
 
 const header = ({ setIsSearchShow }) => {
   const { cartItems } = useContext(CartContext);
@@ -28,7 +32,9 @@ const header = ({ setIsSearchShow }) => {
         <div className="container">
           <div className="header-wrapper">
             <div className="header-mobile">
-              <i className="bi bi-list" id="btn-menu"></i>
+              <i>
+                <BiListUl />
+              </i>
             </div>
             <div className="header-left">
               <a href="index.html" className="logo">
@@ -41,7 +47,9 @@ const header = ({ setIsSearchShow }) => {
                   <li className="menu-list-item">
                     <a href="index.html" className="menu-link active">
                       Home
-                      <i className="bi bi-chevron-down"></i>
+                      <i>
+                        <BiSolidChevronDown />
+                      </i>
                     </a>
                     <div className="menu-dropdown-wrapper">
                       <ul className="menu-dropdown-content">
@@ -78,7 +86,9 @@ const header = ({ setIsSearchShow }) => {
                   <li className="menu-list-item megamenu-wrapper">
                     <a href="shop.html" className="menu-link">
                       Shop
-                      <i className="bi bi-chevron-down"></i>
+                      <i>
+                        <BiSolidChevronDown />
+                      </i>
                     </a>
                     <div className="menu-dropdown-wrapper">
                       <div className="menu-dropdown-megamenu">
@@ -194,7 +204,9 @@ const header = ({ setIsSearchShow }) => {
                   </li>
                 </ul>
               </nav>
-              <i className="bi-x-circle" id="close-sidebar"></i>
+              <i>
+                <BiXCircle id="close-sidebar" />
+              </i>
             </div>
             <div className="header-right">
               <div className="header-right-links">
@@ -215,7 +227,10 @@ const header = ({ setIsSearchShow }) => {
                 </a>
                 <div className="header-cart">
                   <a href="cart.html" className="header-cart-link">
-                    <i className="bi bi-bag"></i>
+                    <i>
+                      <BiShoppingBag />
+                    </i>
+
                     <span className="header-cart-count">
                       {cartItems.length}
                     </span>
