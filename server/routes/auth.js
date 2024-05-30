@@ -38,11 +38,24 @@ router.post('/login', async (req, res) => {
         const user = await User.findOne({ email });
 
         if (!user) {
-            return res.status(401).send({ error: 'Invalid email or password' });
+            return res.status(401).send({ error: 'Invalid email or password!' });
         }
+
+        const isPasswordValid = await bcrypt.compare(password,user.password);
+
+        if(!isPasswordValid){
+            return res.status(401).send({error: 'Invalid email or password!'})
+        }
+
+        res.status(200).send({
+            id: user._id,
+            email: user.email,
+            username: user.username,
+            role: user.role
+        });
     } catch (error) {
         console.error(error);
-        res.status(500).send({error: 'Internal Server Error'});
+        res.status(500).send({ error: 'Internal Server Error' });
     }
 })
 
