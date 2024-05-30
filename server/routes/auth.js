@@ -3,15 +3,25 @@ const router = express.Router();
 const User = require('../models/User.js');
 const bcrypt = require('bcryptjs');
 
-//Create user
+//Create user (Register)
 router.post('/register', async (req, res) => {
     try {
         const { username, email, password } = req.body;
 
-        const hashedPassword = await bcrypt.hash(password,10);
+        const existingUser = await User.findOne({ email });
 
-        const newUser = await new User({ username, email, password:hashedPassword });
-        await newUser.save();
+        if (existingUser) {
+            res.status(400).send({ error: 'Email already registered!' });
+        } else {
+            const hashedPassword = await bcrypt.hash(password, 10);
+
+            const newUser = await new User({
+                username,
+                email,
+                password: hashedPassword
+            });
+            await newUser.save();
+        }
 
         res.status(201).send(newUser)
     } catch (error) {
@@ -20,26 +30,19 @@ router.post('/register', async (req, res) => {
     }
 })
 
-//Get all users
-router.get('/', async (req, res) => {
+//Login
+router.post('/login', async (req, res) => {
     try {
-        const users = await User.find();
-        res.status(200).send(users);
-    } catch (error) {
-        console.error(error);
-        res.status(404).send({error: 'Users not found!'});
-    }
-})
+        const { email, password } = req.body;
 
-//Get user by id
-router.get('/:id', async (req, res)=>{
-    try {
-        const {id} = req.params;
-        const user = await User.findById(id);
-        res.status(200).send(user);
+        const user = await User.findOne({ email });
+
+        if (!user) {
+            return res.status(401).send({ error: 'Invalid email or password' });
+        }
     } catch (error) {
         console.error(error);
-        res.status(404).send({error:'User not found!'});
+        res.status(500).send({error: 'Internal Server Error'});
     }
 })
 
