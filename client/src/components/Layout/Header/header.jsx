@@ -10,10 +10,11 @@ import { BiSolidChevronDown } from "react-icons/bi";
 import { BiXCircle } from "react-icons/bi";
 import { BsCart2 } from "react-icons/bs";
 import { Link, useLocation } from "react-router-dom";
+import { IoExitOutline } from "react-icons/io5";
 
 const header = ({ setIsSearchShow }) => {
   const { cartItems } = useContext(CartContext);
-
+  const user = localStorage.getItem("user");
   const { pathname } = useLocation();
 
   const handleSubmit = () => {
@@ -202,7 +203,7 @@ const header = ({ setIsSearchShow }) => {
                       </div>
                     </div>
                   </li>
-                  
+
                   <li className="menu-list-item">
                     <Link
                       to={"/contact"}
@@ -214,7 +215,7 @@ const header = ({ setIsSearchShow }) => {
                   </li>
                 </ul>
               </nav>
-              
+
             </div>
             <div className="header-right">
               <div className="header-right-links">
@@ -228,13 +229,13 @@ const header = ({ setIsSearchShow }) => {
                     <IoIosSearch />
                   </i>
                 </button>
-                <a href="#">
+                {/* <a href="#">
                   <i>
                     <IoMdHeartEmpty />
                   </i>
-                </a>
+                </a> */}
                 <div className="header-cart">
-                <Link to={"/cart"} className="header-cart-link">
+                  <Link to={"/cart"} className="header-cart-link">
                     <i>
                       <BsCart2 />
                     </i>
@@ -244,6 +245,25 @@ const header = ({ setIsSearchShow }) => {
                     </span>
                   </Link>
                 </div>
+                {user && (
+                  <button
+                    className="search-button"
+                    onClick={() => {
+                      if (
+                        window.confirm(
+                          "Çıkış yapmak istediğinize emin misiniz?"
+                        )
+                      ) {
+                        {
+                          localStorage.removeItem("user");
+                          window.location.href = "/";
+                        }
+                      }
+                    }}
+                  >
+                    <i className="bi bi-box-arrow-right"><IoExitOutline /></i>
+                  </button>
+                )}
               </div>
             </div>
           </div>
