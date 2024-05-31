@@ -1,7 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
+import { message } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 const register = () => {
+
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         username: '',
@@ -10,15 +14,42 @@ const register = () => {
     });
 
     const handleInputChange = (e) => {
-        const {name,value} = e.target;
-        setFormData({...formData, [name]: value});
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    }
+
+    const handleRegister = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch(`http://localhost:3000/api/auth/register`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+
+            if (response.ok) {
+                const data = await response.json();
+                const { password, ...rest } = data;
+                localStorage.setItem('user', JSON.stringify(rest));
+                message.success('Registration successful!')
+                navigate('/');
+            } else {
+                message.error('Registration failed!')
+            }
+
+            console.log(response);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
         <>
             <div className="account-column">
                 <h2>Register</h2>
-                <form>
+                <form onSubmit={handleRegister}>
                     <div>
                         <label>
                             <span>Username <span className="required">*</span></span>
