@@ -10,7 +10,11 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import Reviews from "./components/Reviews/Reviews";
 import Dialog from "./components/Modals/Dialog/Dialog";
 import { Route, Routes } from "react-router-dom";
-import AdminUserPage from "./pages/admin/AdminUserPage";
+import UserPage from "./pages/admin/UserPage";
+import CategoryPage from "./pages/admin/Categories/CategoryPage";
+import UpdateCategoryPage from "./pages/admin/Categories/UpdateCategoryPage";
+import CreateCategoryPage from "./pages/admin/Categories/CreateCategoryPage";
+
 
 const App = () => {
   return (
@@ -24,7 +28,10 @@ const App = () => {
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/product/:id" element={<ProductDetailsPage />} />
         <Route path="/admin/*">
-          <Route path="users" element={<AdminUserPage/>}/>
+          <Route path="users" element={<UserPage/>}/>
+          <Route path="categories" element={<CategoryPage/>}/>
+          <Route path="categories/update/:id" element={<UpdateCategoryPage />} />
+          <Route path="categories/create" element={<CreateCategoryPage />} />
         </Route>
       </Routes>
     </>

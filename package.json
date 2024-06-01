@@ -1,5 +1,9 @@
 {
+  "scripts": {
+    "start":"concurrently \"cd server && npm start\" \"cd client && npm run dev\""
+  },
   "dependencies": {
-    "antd": "^5.17.4"
+    "antd": "^5.17.4",
+    "concurrently": "^8.2.2"
   }
 }
