@@ -10,6 +10,7 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import Reviews from "./components/Reviews/Reviews";
 import Dialog from "./components/Modals/Dialog/Dialog";
 import { Route, Routes } from "react-router-dom";
+import AdminUserPage from "./pages/admin/AdminUserPage";
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/product/:id" element={<ProductDetailsPage />} />
+        <Route path="/admin/*">
+          <Route path="users" element={<AdminUserPage/>}/>
+        </Route>
       </Routes>
     </>
   );
