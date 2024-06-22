@@ -30,7 +30,7 @@ const ProductDetailsPage = () => {
   }, [apiUrl, productId]);
 
   return (
-    singleProduct ? <ProductDetails singleProduct={singleProduct}/> : <p>Product will be added</p>
+    singleProduct ? <ProductDetails singleProduct={singleProduct} setSingleProduct={setSingleProduct}/> : <p>Product will be added</p>
   );
 };
 

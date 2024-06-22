@@ -4,7 +4,7 @@ import Gallery from "./Gallery/gallery";
 import Info from "./Info/info";
 import Tabs from "./Tabs/tabs";
 
-const productDetails = ({singleProduct}) => {
+const productDetails = ({singleProduct,setSingleProduct}) => {
   return (
     <section className="single-product">
       <div className="container">
@@ -16,7 +16,7 @@ const productDetails = ({singleProduct}) => {
               <Info singleProduct={singleProduct}/>
             </main>
           </div>
-          <Tabs singleProduct={singleProduct} />
+          <Tabs singleProduct={singleProduct} setSingleProduct={setSingleProduct} />
         </div>
       </div>
     </section>
