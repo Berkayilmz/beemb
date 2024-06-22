@@ -48,9 +48,9 @@ PrevBtn.propTypes = {
   onClick: PropTypes.func,
 };
 
-const gallery = () => {
+const gallery = ({singleProduct}) => {
   const [activeImg, setActiveImg] = useState({
-    img: productsData[0].img.singleImage,
+    img: singleProduct.img[0],
     imgIndex: 0,
   });
 
@@ -72,13 +72,13 @@ const gallery = () => {
         <div className="glide__track" data-glide-el="track">
           <ol className="gallery-thumbs glide__slides">
             <Slider {...sliderSettings}>
-              {productsData[0].img.thumbs.map((itemImg, index) => (
+              {singleProduct.img.map((itemImg, index) => (
                 <li
                   className="glide__slide glide__slide--active"
                   key={index}
                   onClick={() =>
                     setActiveImg({
-                      img: productsData[0].img.thumbs[index],
+                      img: itemImg,
                       imgIndex: index,
                     })
                   }

@@ -4,7 +4,7 @@ import Gallery from "./Gallery/gallery";
 import Info from "./Info/info";
 import Tabs from "./Tabs/tabs";
 
-const productDetails = () => {
+const productDetails = ({singleProduct}) => {
   return (
     <section className="single-product">
       <div className="container">
@@ -12,11 +12,11 @@ const productDetails = () => {
           <Breadcrumb />
           <div className="single-content">
             <main className="site-main">
-              <Gallery />
-              <Info />
+              <Gallery singleProduct={singleProduct}/>
+              <Info singleProduct={singleProduct}/>
             </main>
           </div>
-          <Tabs />
+          <Tabs singleProduct={singleProduct} />
         </div>
       </div>
     </section>

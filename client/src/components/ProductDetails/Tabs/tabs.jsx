@@ -2,7 +2,7 @@ import { useState } from "react";
 import Reviews from "../../Reviews/Reviews";
 import "./tabs.css";
 
-const tabs = () => {
+const tabs = ({singleProduct}) => {
   const [activeTab, setActiveTab] = useState("desc");
 
   const handleTabClick = (e, tab) => {
@@ -43,18 +43,16 @@ const tabs = () => {
       </ul>
       <div className="tab-panel">
         <div
-          className={`tab-panel-descriptions content ${
-            activeTab === "desc" ? "active" : ""
-          }`}
+          className={`tab-panel-descriptions content ${activeTab === "desc" ? "active" : ""
+            }`}
         >
-          <p>Product Description 1</p>
-          <br />
-          <p>Product Description 2</p>
+          <p className="product-description"
+            dangerouslySetInnerHTML={{ __html: singleProduct.description }}
+          ></p>
         </div>
         <div
-          className={`tab-panel-information content ${
-            activeTab === "info" ? "active" : ""
-          }`}
+          className={`tab-panel-information content ${activeTab === "info" ? "active" : ""
+            }`}
           id="info"
         >
           <h3>Additional information</h3>
@@ -72,7 +70,11 @@ const tabs = () => {
               <tr>
                 <th>Size</th>
                 <td>
-                  <p>XXS, XS, S, M, L, XL, XXL</p>
+                  <p>
+                    {singleProduct.sizes.map((item,index)=>(
+                      <span key={index}>{`${item.toUpperCase()}  `}</span>
+                    ))}
+                  </p>
                 </td>
               </tr>
             </tbody>
@@ -80,6 +82,7 @@ const tabs = () => {
         </div>
         <Reviews
           active={activeTab === "reviews" ? "content active" : "content"}
+          singleProduct={singleProduct}
         />
       </div>
     </div>
