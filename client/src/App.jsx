@@ -20,6 +20,7 @@ import UpdateProductPage from "./pages/admin/Products/UpdateProductPage";
 import CouponPage from "./pages/admin/Coupons/CouponPage";
 import CreateCouponPage from "./pages/admin/Coupons/CreateCouponPage";
 import UpdateCouponPage from "./pages/admin/Coupons/UpdateCouponPage";
+import Success from "./pages/Succes";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/product/:id" element={<ProductDetailsPage />} />
+        <Route path="/success" element={<Success />} />
         <Route path="/admin/*">
           <Route path="users" element={<UserPage />} />
           <Route path="categories" element={<CategoryPage />} />
