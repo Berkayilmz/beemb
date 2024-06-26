@@ -23,12 +23,12 @@ import UpdateCouponPage from "./pages/admin/Coupons/UpdateCouponPage";
 import Success from "./pages/Succes";
 import OrderPage from "./pages/admin/OrderPage";
 import DashboardPage from "./pages/admin/DashboardPage";
+import UserProfile from "./pages/UserProfile";
 
 const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -36,6 +36,7 @@ const App = () => {
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/product/:id" element={<ProductDetailsPage />} />
         <Route path="/success" element={<Success />} />
+        <Route path="/users/:id" element={<UserProfile/>}/>
         <Route path="/admin/*">
           <Route index element={<DashboardPage />} />
           <Route path="users" element={<UserPage />} />

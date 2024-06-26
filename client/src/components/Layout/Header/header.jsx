@@ -14,12 +14,15 @@ import { IoExitOutline } from "react-icons/io5";
 
 const header = ({ setIsSearchShow }) => {
   const { cartItems } = useContext(CartContext);
-  const user = localStorage.getItem("user");
+  const user = JSON.parse(localStorage.getItem("user"))
   const { pathname } = useLocation();
+
 
   const handleSubmit = () => {
     setIsSearchShow(true);
   };
+
+
 
   return (
     <header>
@@ -219,11 +222,13 @@ const header = ({ setIsSearchShow }) => {
             </div>
             <div className="header-right">
               <div className="header-right-links">
-                <Link to={"/auth"} className="header-account">
+                <Link to={user? `/users/${user.id}` : "/auth"} className="header-account">
                   <i>
                     <IoPersonOutline />
                   </i>
                 </Link>
+
+
                 <button className="search-button" onClick={handleSubmit}>
                   <i>
                     <IoIosSearch />

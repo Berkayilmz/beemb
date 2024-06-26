@@ -28,4 +28,21 @@ router.delete('/:id',async (req,res) => {
     }
 })
 
+//Get user by id
+router.get("/:id", async (req, res) => {
+    try {
+      const { id } = req.params;
+      const user = await User.findById(id);
+  
+      if (!user) {
+        return res.status(404).json({ error: "User not found!" });
+      }
+  
+      res.status(200).send(user);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send({ error: "Internal Server Error!" });
+    }
+  });
+
 module.exports = router;
