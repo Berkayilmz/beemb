@@ -1,33 +1,34 @@
 import { Button, Result } from "antd";
- import { useContext, useEffect } from "react";
- import { Link } from "react-router-dom";
- import { CartContext } from "../components/context/cartProvider";
+import { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../components/context/cartProvider";
 
- const Success = () => {
-   const { setCartItems } = useContext(CartContext);
+const Success = () => {
+  const { setCartItems } = useContext(CartContext);
 
-   useEffect(() => {
-     setCartItems([]);
-   }, [setCartItems]);
+  useEffect(() => {
+    setCartItems([]);
+  }, [setCartItems]);
 
-   return (
-     <div className="success-page">
-       <div className="container">
-         <Result
-           status="success"
-           title="Ödeme Başarılı!"
-           subTitle="Siparişiniz başarıyla tamamlandı"
-           extra={[
-             <Link to={"/"} key="home">
-               <Button type="primary">Home</Button>,
-             </Link>,
+  return (
+    <div className="success-page">
+      <div className="container">
+        <Result
+          status="success"
+          title="Ödeme Başarılı!"
+          subTitle="Siparişiniz başarıyla tamamlandı"
+          extra={[
+            <Link to={"/"} key="home">
+              <Button type="primary">Ana Sayfa</Button>
+            </Link>,
+            <a href="/admin/orders" key={"order"}>
+              <Button key="buy">Siparişlerim</Button>
+            </a>,
+          ]}
+        />
+      </div>
+    </div>
+  );
+};
 
-             <Button key="buy">My Orders</Button>,
-           ]}
-         />
-       </div>
-     </div>
-   );
- };
-
- export default Success;
+export default Success;
