@@ -14,7 +14,7 @@ Her zaman en rekabetçi fiyatlarla kaliteli ürünleri sunmak için çaba göste
 <p><b>Proje Ekibi:  </b> Berkay Yılmaz, Mehmet Emre Arıcan</p>
 <br>
 
-1. [Proje Planı](Proje-plani.md)
+1. [Proje Planı](Proje-Dosyalari/Proje-plani.md)
 2. [Gereksinim Analizi](Gereksinim-Analizi.md)
 3. [Durum Diyagramı](Durum-Diyagramı.md)
 4. [Durum Senaryoları](Durum-Senaryolari.md)
