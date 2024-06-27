@@ -18,5 +18,8 @@ router.use("/coupons", couponRoute);
 router.use('/users', userRoute);
 router.use("/payment", paymentRoute);
 
+router.get('/', function(req, res, next) {
+    res.render('index', { title: 'Express' });
+  });
 
 module.exports = router;
