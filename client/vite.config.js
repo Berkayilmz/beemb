@@ -9,7 +9,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['antd', '@ant-design/icons']
+      external: ['antd']
       
     }
   }
