@@ -18,8 +18,6 @@ router.use("/coupons", couponRoute);
 router.use('/users', userRoute);
 router.use("/payment", paymentRoute);
 
-router.get('/', (req, res) => {
-    res.send('API is working!');
-});
+
 
 module.exports = router;
