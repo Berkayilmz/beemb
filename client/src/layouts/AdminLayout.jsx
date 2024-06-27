@@ -1,11 +1,14 @@
 import { Layout, Menu } from "antd";
 import PropTypes from "prop-types";
-import { CiUser } from "react-icons/ci";
-import { FaLaptop } from "react-icons/fa";
-import { AiOutlineRollback, AiOutlineDashboard, AiOutlineAppstore } from "react-icons/ai";
-import { FaBarcode } from "react-icons/fa";
-import { FiShoppingCart } from "react-icons/fi";
-
+import {
+  UserOutlined,
+  LaptopOutlined,
+  RollbackOutlined,
+  BarcodeOutlined,
+  DashboardOutlined,
+  ShoppingCartOutlined,
+  AppstoreOutlined,
+} from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 
 const { Sider, Header, Content } = Layout;
@@ -22,7 +25,7 @@ const AdminLayout = ({ children }) => {
   const menuItems = [
     {
       key: "1",
-      icon: <AiOutlineDashboard />,
+      icon: <DashboardOutlined />,
       label: "Dashboard",
       onClick: () => {
         navigate(`/admin`);
@@ -30,7 +33,7 @@ const AdminLayout = ({ children }) => {
     },
     {
       key: "2",
-      icon: <AiOutlineAppstore />,
+      icon: <AppstoreOutlined />,
       label: "Kategoriler",
       path: "/",
       children: [
@@ -54,7 +57,7 @@ const AdminLayout = ({ children }) => {
     },
     {
       key: "5",
-      icon: <FaLaptop />,
+      icon: <LaptopOutlined />,
       label: "Ürünler",
       path: "/",
       children: [
@@ -78,7 +81,7 @@ const AdminLayout = ({ children }) => {
     },
     {
       key: "8",
-      icon: <FaBarcode />,
+      icon: <BarcodeOutlined />,
       label: "Kuponlar",
       path: "/admin/coupons",
       children: [
@@ -102,7 +105,7 @@ const AdminLayout = ({ children }) => {
     },
     {
       key: "11",
-      icon: <CiUser />,
+      icon: <UserOutlined />,
       label: "Kullanıcı Listesi",
       path: "/admin/users",
       onClick: () => {
@@ -111,7 +114,7 @@ const AdminLayout = ({ children }) => {
     },
     {
       key: "12",
-      icon: <FiShoppingCart />,
+      icon: <ShoppingCartOutlined />,
       label: "Siparişler",
       onClick: () => {
         navigate(`/admin/orders`);
@@ -119,7 +122,7 @@ const AdminLayout = ({ children }) => {
     },
     {
       key: "13",
-      icon: <AiOutlineRollback />,
+      icon: <RollbackOutlined />,
       label: "Ana Sayfaya Git",
       onClick: () => {
         window.location.href = '/'
