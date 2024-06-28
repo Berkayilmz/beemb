@@ -4,12 +4,13 @@ import { BiHeart } from "react-icons/bi";
 import { BiShare } from "react-icons/bi";
 import { GoStarFill } from "react-icons/go";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { CartContext } from "../../context/cartProvider";
 const info = ({ singleProduct }) => {
 
   const quantityRef = useRef();
   const {addToCart, cartItems} = useContext(CartContext)
+  const [activeSize, setActiveSize] = useState('');
   const originalPrice = singleProduct.price.current;
   const discountPercentage = singleProduct.price.discount;
   //indirim fiyatı
@@ -19,6 +20,10 @@ const info = ({ singleProduct }) => {
     cartItem._id === singleProduct._id
   })
 
+  const handleSizeClick = (size) => {
+    setActiveSize(size);
+};
+console.log(singleProduct)
   return (
     <div className="product-info">
       <h1 className="product-title">{singleProduct.name}</h1>
@@ -46,11 +51,11 @@ const info = ({ singleProduct }) => {
           </li>
           <li>
             <i>
-              <FaRegStarHalfStroke />
+            <GoStarFill />
             </i>
           </li>
         </ul>
-        <span>2 reviews</span>
+        <span>{singleProduct.reviews.length} reviews</span>
       </div>
       <div className="product-price">
         <s className="old-price">${originalPrice}</s>
@@ -69,7 +74,8 @@ const info = ({ singleProduct }) => {
               {singleProduct.colors.map((color,index) => (
                 <div className="color-wrapper" key={index}>
                   <label style={{
-                    backgroundColor: `#${color}`
+                    backgroundColor: `#${color}`,
+                    border: '1px solid #ccc',
                   }}>
                     <input type="radio" name="product-color" />
                   </label>
@@ -82,10 +88,16 @@ const info = ({ singleProduct }) => {
               <span>Size</span>
             </div>
             <div className="values-list">
-              {singleProduct.sizes.map((size,index)=>(
-                <span key={index}>{size.toUpperCase()}</span>
-              ))}
-            </div>
+                            {singleProduct.sizes.map((size, index) => (
+                                <span
+                                    key={index}
+                                    className={`size ${activeSize === size ? 'active' : ''}`}
+                                    onClick={() => handleSizeClick(size)}
+                                >
+                                    {size.toUpperCase()}
+                                </span>
+                            ))}
+                        </div>
           </div>
           <div className="cart-button">
             <input type="number" defaultValue="1" min="1" id="quantity" ref={quantityRef} />
@@ -133,7 +145,7 @@ const info = ({ singleProduct }) => {
         </div>
         <div className="product-categories">
           <span>Categories:</span>
-          <strong>Pants , Women</strong>
+          <strong>{singleProduct.category}</strong>
         </div>
         <div className="product-tags">
           <span>Tags:</span>
