@@ -31,7 +31,7 @@ const footer = () => {
                                 <div className="footer-contact-top">
                                     <h3 className="contact-title">
                                         Need help? <br />
-                                        (+90) 123 456 78 90
+                                        (+90) 511 111 11 11
                                     </h3>
                                     <p className="contact-desc">We are available 8:00am – 7:00pm</p>
                                 </div>
@@ -58,17 +58,15 @@ const footer = () => {
                         <div className="footer-widgets">
                             <div className="brand-info">
                                 <div className="footer-logo">
-                                    <a href="index.html" className="logo">LOGO</a>
+                                    <a href="index.html" className="logo">BEEMB</a>
                                 </div>
                                 <div className="footer-desc">
-                                    <p> Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis
-                                        in
-                                        termapol.</p>
+                                    <p> Kaliteli tercih, kaliteli ürün...</p>
                                 </div>
                                 <div className="footer-contact">
                                     <p>
-                                        <a href="tel:555 555 55 55">(+800) 1234 5678 90</a> – <a
-                                            href="mailto:info@example.com">info@example.com</a>
+                                        <a href="tel:555 555 55 55">(+511) 111 11 11</a> – <a
+                                            href="mailto:info@example.com">beemb@gmail.com</a>
                                     </p>
                                 </div>
                             </div>
@@ -132,26 +130,7 @@ const footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="widget-nav-menu">
-                                <h4>Categories</h4>
-                                <ul className="menu-list">
-                                    <li>
-                                        <a href="#">Women</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Men</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Bags</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Outerwear</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Shoes</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -160,7 +139,7 @@ const footer = () => {
                         <div className="footer-copyright">
                             <div className="site-copyright">
                                 <p>
-                                    Copyright 2022 © E-Commerce Theme. All right reserved. Powered by Emin Basbayan.
+                                    Copyright 2024 © E-Commerce Theme. All right reserved. Powered by Berkay Yılmaz and Mehmet Emra Arıcan.
                                 </p>
                             </div>
                             <a href="#">
