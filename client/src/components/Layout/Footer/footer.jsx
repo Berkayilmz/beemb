@@ -14,16 +14,14 @@ const footer = () => {
                                 <div className="footer-subscribe">
                                     <div className="footer-subscribe-top">
                                         <h3 className="subscribe-title">Get our emails for info on new items, sales and more.</h3>
-                                        <p className="subscribe-desc">We'll email you a voucher worth $10 off your first order over $50.</p>
+                                        
                                     </div>
                                     <div className="footer-subscribe-bottom">
                                         <form>
                                             <input type="text" placeholder="Enter your email address." />
                                             <button className="btn">Subscribe</button>
                                         </form>
-                                        <p className="privacy-text">
-                                            By subscribing you agree to our <a href="#">Terms & Conditions and Privacy & Cookies Policy.</a>
-                                        </p>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -45,8 +43,7 @@ const footer = () => {
                                         </a>
                                     </div>
                                     <p className="privacy-text">
-                                        <strong>Shopping App:</strong> Try our View in Your Room feature, manage registries and save payment
-                                        info.
+                                        <strong>Shopping App:</strong> 
                                     </p>
                                 </div>
                             </div>
@@ -65,7 +62,7 @@ const footer = () => {
                                 </div>
                                 <div className="footer-contact">
                                     <p>
-                                        <a href="tel:555 555 55 55">(+511) 111 11 11</a> – <a
+                                        <a href="tel:555 555 55 55">(+90) 511 11 11</a> – <a
                                             href="mailto:info@example.com">beemb@gmail.com</a>
                                     </p>
                                 </div>
@@ -79,15 +76,8 @@ const footer = () => {
                                     <li>
                                         <a href="#">Privacy Policy</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Returns Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Shipping Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Dropshipping</a>
-                                    </li>
+                                   
+                                    
                                 </ul>
                             </div>
                             <div className="widget-nav-menu">
@@ -105,16 +95,14 @@ const footer = () => {
                                     <li>
                                         <a href="#">Account details</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Track My Orders</a>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                             <div className="widget-nav-menu">
                                 <h4>Shop</h4>
                                 <ul className="menu-list">
                                     <li>
-                                        <a href="#">Affiliate</a>
+                                        <a href="#">Summer Collection</a>
                                     </li>
                                     <li>
                                         <a href="#">Bestsellers</a>
@@ -154,7 +142,7 @@ const footer = () => {
                                         <a href="#">Terms and Conditions</a>
                                     </li>
                                     <li className="list-item">
-                                        <a href="#">Returns Policy</a>
+                                        <a href="#">Privacy Policy</a>
                                     </li>
                                 </ul>
                             </div>

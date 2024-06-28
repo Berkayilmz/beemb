@@ -6,7 +6,9 @@ const contact = () => {
       <div className="contact-top">
         <div className="contact-map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.9906063522673!2d30.539046415712685!3d37.74237097975991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cbe9b16b1b8c4f%3A0xe9454f8cf96efde2!2sS%C3%BCleyman%20Demirel%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1665091191675!5m2!1str!2str"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.812687235634!2d30.525451615733742!3d37.766548416051234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cbe8f849e4e8d7%3A0x7c07c9a6bba6b49e!2sIsparta%20City%20Center!5e0!3m2!1sen!2str!4v1620152880181!5m2!1sen!2str"
+
+
             width="100%"
             height="500"
             style={{
@@ -23,12 +25,7 @@ const contact = () => {
           <div className="contact-titles">
             <h4>Contact with us</h4>
             <h2>Get In Touch</h2>
-            <p>
-              In hac habitasse platea dictumst. Pellentesque viverra sem nec
-              orci lacinia, in bibendum urna mollis. Quisque nunc lacus, varius
-              vel leo a, pretium lobortis metus. Vivamus consectetur consequat
-              justo.
-            </p>
+            
           </div>
           <div className="contact-elements">
             <form className="contact-form">

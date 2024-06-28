@@ -40,6 +40,11 @@ const register = () => {
                 message.error('Registration failed!')
             }
 
+            setTimeout(function() {
+                window.location.reload();
+            }, 1000); // 1000 milisaniye = 1 saniye
+            
+            
             console.log(response);
         } catch (error) {
             console.log(error);
