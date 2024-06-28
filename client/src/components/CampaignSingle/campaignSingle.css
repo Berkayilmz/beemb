@@ -1,4 +1,4 @@
-/* .campaign-single {
+.campaign-single {
     background-image: url(../../img/single-campaign.png);
     background-attachment: fixed;
     padding: 140px 15px;
@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-  } */
+  }
 
   .campaign-single .campaign-wrapper {
     color: white;

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "concurrently \"cd server && npm start\" \"cd client && npm run dev\""
+    "start": "concurrently \"cd server/functions && npm start\" \"cd client && npm run dev\""
   },
   "dependencies": {
     "antd": "^5.18.3",
