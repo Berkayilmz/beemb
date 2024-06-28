@@ -2,6 +2,7 @@
   base = "server"  # Temel dizin olarak server'i belirtin
   publish = ""  # Yayın dizini, server/dist olarak ayarlanabilir, yapılandırmanıza göre güncelleyin
   command = "npm run build"  # Build komutu olarak sunucu başlatma komutunu belirtin
+  functions = "functions"  # Fonksiyonlar dizini olarak functions'i belirtin
 
 [[redirects]]
   from = "/*"
