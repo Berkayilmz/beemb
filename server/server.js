@@ -31,6 +31,11 @@ app.use(cors({
 
 app.use('/api', mainRoute);
 
+app.get('/', (req, res) => {
+    res.send('API is running');
+});
+
+
 app.listen(PORT, () => {
     MongoDBConnect();
     console.log(`PORT ${PORT} listening!`);
