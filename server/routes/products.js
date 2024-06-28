@@ -113,5 +113,29 @@ router.get("/category/:categoryId", async (req, res) => {
   }
 });
 
+//delete review by id
+router.delete('/:productId/reviews/:reviewId', async (req, res) => {
+  const { productId, reviewId } = req.params;
+
+  try {
+      // Üründen ilgili review'i doğrudan sil
+      const product = await Product.findByIdAndUpdate(
+          productId,
+          { $pull: { reviews: { _id: reviewId } } },
+          { new: true } // Güncellenmiş belgeyi geri döndürmek için
+      );
+
+      if (!product) {
+          return res.status(404).json({ error: 'Product not found' });
+      }
+
+      res.json({ message: 'Review deleted successfully' });
+  } catch (err) {
+      console.error('Error deleting review:', err);
+      res.status(500).json({ error: 'Server error' });
+  }
+});
+
+
 
 module.exports = router;

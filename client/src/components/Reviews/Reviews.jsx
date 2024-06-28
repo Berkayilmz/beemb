@@ -48,7 +48,7 @@ const Reviews = ({ active, singleProduct, setSingleProduct }) => {
                         <div className="comments">
                             <ol className="comment-list">
                                 {thisReview.map((item, index) => (
-                                    <ReviewItem key={index} item={item} reviewItem={item} />
+                                    <ReviewItem key={index} item={item} reviewItem={item} singleProduct={singleProduct}/>
                                 ))}
                             </ol>
                         </div>

@@ -40,7 +40,7 @@ const Category = () => {
                 <img src={`../../public/${product.img[0]}`} alt={product.name} style={{ width: '200px', height: 'auto' }} /> 
                 <h3>{product.name}</h3>
                 <h5>{product.description}</h5>
-                <span>{product.price.current}</span>
+                <span>{product.price.current}$</span>
               </Link>
             </div>
           ))}

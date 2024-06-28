@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { message } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const register = () => {
 
@@ -33,9 +34,8 @@ const register = () => {
             if (response.ok) {
                 const data = await response.json();
                 const { password, ...rest } = data;
-                localStorage.setItem('user', JSON.stringify(rest));
-                message.success('Registration successful!')
-                navigate('/');
+                navigate('/auth');
+                message.success('Registration successful! Please Login!')
             } else {
                 message.error('Registration failed!')
             }
@@ -45,6 +45,15 @@ const register = () => {
             console.log(error);
         }
     }
+
+    useEffect(() => {
+        // Form verilerini sıfırla
+        setFormData({
+            username: '',
+            email: '',
+            password: ''
+        });
+    }, [navigate]);
 
     return (
         <>

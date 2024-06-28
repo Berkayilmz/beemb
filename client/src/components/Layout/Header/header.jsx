@@ -17,6 +17,13 @@ const header = ({ setIsSearchShow }) => {
   const user = JSON.parse(localStorage.getItem("user"))
   const { pathname } = useLocation();
 
+  const redirectToAdmin = () => {
+    window.location.href = '/admin';
+    setTimeout(() => {
+      window.location.reload();
+  }, 250);
+};
+
 
   const handleSubmit = () => {
     setIsSearchShow(true);
@@ -222,7 +229,18 @@ const header = ({ setIsSearchShow }) => {
             </div>
             <div className="header-right">
               <div className="header-right-links">
-                <Link to={user? `/users/${user.id}` : "/auth"} className="header-account">
+                <Link
+                  to={
+                    user
+                      ? user.role === 'admin'
+                        ? '/admin' 
+                        : `/users/${user.id}`
+                      : '/auth'
+                  }
+                  className="header-account"
+                  onClick={user && user.role === 'admin' ? redirectToAdmin : null}
+                  >
+                    
                   <i>
                     <IoPersonOutline />
                   </i>

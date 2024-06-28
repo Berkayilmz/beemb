@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Button, Form, Input, Card, message, Table } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
+import { BsTrash3 } from "react-icons/bs";
 
 const UserProfile = () => {
     const apiUrl = import.meta.env.VITE_API_BASE_URL;
@@ -21,7 +22,10 @@ const UserProfile = () => {
             dataIndex: "amount",
             render: (record) => <b>${(record / 100).toFixed(2)}</b>,
         },
+       
     ];
+
+
 
     const fetchUserInfo = useCallback(async () => {
         try {
@@ -121,6 +125,7 @@ const UserProfile = () => {
             key: 'amount',
             render: (record) => <b>${(record / 100).toFixed(2)}</b>,
         },
+        
     ];
 
     return (
