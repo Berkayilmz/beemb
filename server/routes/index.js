@@ -18,5 +18,8 @@ router.use("/coupons", couponRoute);
 router.use('/users', userRoute);
 router.use("/payment", paymentRoute);
 
+router.get("/", async (req,res)=>{
+    res.send("api");
+})
 
 module.exports = router;
