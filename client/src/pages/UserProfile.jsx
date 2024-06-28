@@ -2,17 +2,14 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Button, Form, Input, Card, message, Table } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
 
-
 const UserProfile = () => {
     const apiUrl = import.meta.env.VITE_API_BASE_URL;
     const navigate = useNavigate();
     const [userInfo, setUserInfo] = useState({});
-    const [orderHistory, setOrderHistory] = useState([]);
     const [loading, setLoading] = useState(false);
     const [dataSource, setDataSource] = useState([]);
     const MY_STRIPE_SECRET_KEY = import.meta.env.VITE_API_STRIPE_SECRET_KEY;
-    const matchedUser=[];
-    const {id} = useParams();
+    const { id } = useParams();
 
     const columns = [
         {
@@ -27,7 +24,6 @@ const UserProfile = () => {
     ];
 
     const fetchUserInfo = useCallback(async () => {
-
         try {
             const response = await fetch(`${apiUrl}/api/users/${id}`);
             if (response.ok) {
@@ -42,61 +38,45 @@ const UserProfile = () => {
         } catch (error) {
             console.log('Failed to fetch user information:', error);
         }
-    }, [apiUrl, navigate]);
+    }, [apiUrl, navigate, id]);
 
     const fetchOrderHistory = useCallback(async () => {
-        const fetchData = async () => {
-            setLoading(true);
-            try {
-                const response = await fetch(
-                    `https://api.stripe.com/v1/payment_intents`,
-                    {
-                        method: "GET",
-                        headers: {
-                            Authorization: `Bearer ${MY_STRIPE_SECRET_KEY}`,
-                        },
-                    }
-                );
-
-                if (response.ok) {
-                    const { data } = await response.json();
-                    const userOrders = data.filter(order => order.receipt_email === userInfo.email);
-                    data.forEach(user=>{
-                        if(user.receipt_email === userInfo.email){
-                            matchedUser.push(user);
-                        }
-                    })
-                    
-                    setDataSource(data);
-                } else {
-                    message.error("Something went wrong");
+        setLoading(true);
+        try {
+            const response = await fetch(
+                `https://api.stripe.com/v1/payment_intents`,
+                {
+                    method: "GET",
+                    headers: {
+                        Authorization: `Bearer ${MY_STRIPE_SECRET_KEY}`,
+                    },
                 }
-            } catch (error) {
-                console.log("Data Error: ", error);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchData();
-    }, [apiUrl]);
+            );
 
+            if (response.ok) {
+                const { data } = await response.json();
+                const userOrders = data.filter(order => order.receipt_email === userInfo.email);
+                console.log(userOrders)
+                setDataSource(userOrders);
+            } else {
+                message.error("Something went wrong");
+            }
+        } catch (error) {
+            console.log("Data Error: ", error);
+            message.error("Failed to fetch order history");
+        } finally {
+            setLoading(false);
+        }
+    }, [MY_STRIPE_SECRET_KEY, userInfo.email]);
 
     const handleUpdateUserInfo = async (values) => {
-        console.log(values)
-        console.log(id);
-        
         try {
-
-            const {name,email,password}=values;
-            console.log(name)
-            console.log( email)
-            console.log(password)
-
+            const { name, email, password } = values;
             const updatedUserData = {
                 username: name,
                 email,
                 password,
-            }
+            };
 
             const response = await fetch(`${apiUrl}/api/users/${id}`, {
                 method: 'PUT',
@@ -105,6 +85,7 @@ const UserProfile = () => {
                 },
                 body: JSON.stringify(updatedUserData),
             });
+
             if (response.ok) {
                 const updatedUser = await response.json();
                 setUserInfo(updatedUser);
@@ -114,6 +95,7 @@ const UserProfile = () => {
             }
         } catch (error) {
             console.log('Failed to update user information:', error);
+            message.error('Failed to update user information');
         }
     };
 
@@ -137,6 +119,7 @@ const UserProfile = () => {
             title: 'Amount',
             dataIndex: 'amount',
             key: 'amount',
+            render: (record) => <b>${(record / 100).toFixed(2)}</b>,
         },
     ];
 

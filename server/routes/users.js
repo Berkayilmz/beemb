@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User.js');
+const bcrypt = require('bcryptjs');
 
 //Get all users
 router.get('/', async (req,res)=>{
@@ -45,21 +46,28 @@ router.get("/:id", async (req, res) => {
     }
   });
 
-  //Update user by id
   router.put("/:id", async (req, res) => {
     try {
-      const { id } = req.params;
-      const updates = req.body;
-  
-      const updatedUser = await User.findByIdAndUpdate(id, updates, {
-        new: true,
-      });
-  
-      res.status(200).send(updatedUser);
+        const { id } = req.params;
+        const updates = req.body;
+
+        // Şifreyi hashle
+        if (updates.password) {
+            const hashedPassword = await bcrypt.hash(updates.password, 10);
+            updates.password = hashedPassword;
+        }
+
+        const updatedUser = await User.findByIdAndUpdate(id, updates, {
+            new: true,
+        });
+
+        res.status(200).send(updatedUser);
     } catch (error) {
-      console.log(error);
-      res.status(500).send({ error: "Internal Server Error!" });
+        console.log(error);
+        res.status(500).send({ error: "Internal Server Error!" });
     }
-  });
+});
+
+  
 
 module.exports = router;
