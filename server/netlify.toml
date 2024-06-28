@@ -1,6 +1,6 @@
 [build]
   base = "server"  # Temel dizin olarak server'i belirtin
-  publish = "server/dist"  # Yayın dizini, server/dist olarak ayarlanabilir, yapılandırmanıza göre güncelleyin
+  publish = ""  # Yayın dizini, server/dist olarak ayarlanabilir, yapılandırmanıza göre güncelleyin
   command = "npm run build"  # Build komutu olarak sunucu başlatma komutunu belirtin
 
 [[redirects]]
