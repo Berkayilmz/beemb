@@ -8,6 +8,6 @@ export default defineConfig({
     exclude: ['js-big-decimal']
   },
   build: {
-    outDir: 'dist'
+    outDir: '/client/public/img'
   }
 })
