@@ -12,7 +12,7 @@ const campaignItem = () => {
       <p className="campaign-desc">
         Lorem ipsum dolor sit amet consectetur adipiscing elit dolor
       </p>
-      <a href="#" className="btn btn-primary">
+      <a href="shop" className="btn btn-primary">
         View All
         <i>
           <BiRightArrowAlt />

@@ -10,7 +10,7 @@ const CategoryPage = () => {
 
   const columns = [
     {
-      title: "Category Image",
+      title: "Kategori Görseli",
       dataIndex: "img",
       key: "img",
       render: (imgSrc) => <img src={imgSrc} alt="Image" width={100} />,

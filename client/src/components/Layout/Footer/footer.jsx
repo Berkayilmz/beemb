@@ -71,7 +71,7 @@ const footer = () => {
                                 <h4>Information</h4>
                                 <ul className="menu-list">
                                     <li>
-                                        <a href="#">About Us</a>
+                                        <a href="contact">About Us</a>
                                     </li>
                                     <li>
                                         <a href="#">Privacy Policy</a>
@@ -89,9 +89,7 @@ const footer = () => {
                                     <li>
                                         <a href="#">My Orders</a>
                                     </li>
-                                    <li>
-                                        <a href="#">My Wishlist</a>
-                                    </li>
+                                   
                                     <li>
                                         <a href="#">Account details</a>
                                     </li>

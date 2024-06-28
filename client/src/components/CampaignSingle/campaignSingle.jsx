@@ -9,7 +9,7 @@ const campaignSingle = () => {
           <h2>New Season Sale</h2>
           <strong>40% OFF</strong>
           <span></span>
-          <a href="#" className="btn btn-lg">
+          <a href="shop" className="btn btn-lg">
             SHOP NOW
             <i>
               <FaArrowRight />
