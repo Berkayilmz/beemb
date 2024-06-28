@@ -1,0 +1,9 @@
+[build]
+  base = "server"  # Temel dizin olarak server'i belirtin
+  publish = "server/dist"  # Yayın dizini, server/dist olarak ayarlanabilir, yapılandırmanıza göre güncelleyin
+  command = "npm run start"  # Build komutu olarak sunucu başlatma komutunu belirtin
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

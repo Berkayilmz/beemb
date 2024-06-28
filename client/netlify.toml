@@ -1,0 +1,9 @@
+[build]
+  base = "client"  # Temel dizin olarak client'i belirtin
+  publish = "client/dist"  # Yayın dizini, client/dist olarak ayarlanabilir, yapılandırmanıza göre güncelleyin
+  command = "npm run build"  # Build komutu olarak frontend'in build komutunu belirtin
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
