@@ -45,4 +45,21 @@ router.get("/:id", async (req, res) => {
     }
   });
 
+  //Update user by id
+  router.put("/:id", async (req, res) => {
+    try {
+      const { id } = req.params;
+      const updates = req.body;
+  
+      const updatedUser = await User.findByIdAndUpdate(id, updates, {
+        new: true,
+      });
+  
+      res.status(200).send(updatedUser);
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ error: "Internal Server Error!" });
+    }
+  });
+
 module.exports = router;

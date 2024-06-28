@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Button, Form, Input, Card, message, Table } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
 
+
 const UserProfile = () => {
     const apiUrl = import.meta.env.VITE_API_BASE_URL;
     const navigate = useNavigate();
@@ -12,7 +13,6 @@ const UserProfile = () => {
     const MY_STRIPE_SECRET_KEY = import.meta.env.VITE_API_STRIPE_SECRET_KEY;
     const matchedUser=[];
     const {id} = useParams();
-
 
     const columns = [
         {
@@ -80,14 +80,30 @@ const UserProfile = () => {
         fetchData();
     }, [apiUrl]);
 
+
     const handleUpdateUserInfo = async (values) => {
+        console.log(values)
+        console.log(id);
+        
         try {
-            const response = await fetch(`${apiUrl}/api/user`, {
+
+            const {name,email,password}=values;
+            console.log(name)
+            console.log( email)
+            console.log(password)
+
+            const updatedUserData = {
+                username: name,
+                email,
+                password,
+            }
+
+            const response = await fetch(`${apiUrl}/api/users/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(values),
+                body: JSON.stringify(updatedUserData),
             });
             if (response.ok) {
                 const updatedUser = await response.json();
@@ -137,6 +153,9 @@ const UserProfile = () => {
                     <Form.Item label="Email" name="email">
                         <Input />
                     </Form.Item>
+                    <Form.Item label="Password" name="password">
+                        <Input.Password />
+                    </Form.Item>
                     <Form.Item>
                         <Button type="primary" htmlType="submit">
                             Update
@@ -156,5 +175,4 @@ const UserProfile = () => {
     );
 };
 
-
-export default UserProfile
+export default UserProfile;

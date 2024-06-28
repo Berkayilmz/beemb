@@ -1,17 +1,16 @@
-import React from 'react'
-import './categoryItem.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './categoryItem.css';
 
-const categoryItem = ({category}) => {
-    return (
-        <>
-            <li className="category-item">
-                <a href="#">
-                    <img src={`${category.img}`} alt="" className="category-image" />
-                    <span className="category-title">{category.name}</span>
-                </a>
-            </li>
-        </>
-    )
-}
+const CategoryItem = ({ category }) => {
+  return (
+    <li className="category-item">
+      <Link to={`/category/${category._id}`}>
+        <img src={category.img} alt="" className="category-image" />
+        <span className="category-title">{category.name}</span>
+      </Link>
+    </li>
+  );
+};
 
-export default categoryItem
+export default CategoryItem;

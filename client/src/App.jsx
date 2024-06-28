@@ -24,6 +24,7 @@ import Success from "./pages/Succes";
 import OrderPage from "./pages/admin/OrderPage";
 import DashboardPage from "./pages/admin/DashboardPage";
 import UserProfile from "./pages/UserProfile";
+import Category from "./pages/Category";
 
 const App = () => {
   return (
@@ -36,7 +37,8 @@ const App = () => {
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/product/:id" element={<ProductDetailsPage />} />
         <Route path="/success" element={<Success />} />
-        <Route path="/users/:id" element={<UserProfile/>}/>
+        <Route path="/users/:id" element={<UserProfile />} />
+        <Route path="/category/:id" element={<Category />} />
         <Route path="/admin/*">
           <Route index element={<DashboardPage />} />
           <Route path="users" element={<UserPage />} />
