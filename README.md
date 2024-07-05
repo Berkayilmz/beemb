@@ -9,7 +9,6 @@ Her zaman en rekabetçi fiyatlarla kaliteli ürünleri sunmak için çaba göste
 <br>
 
 <p><b>Proje Kategorisi:  </b> E-Ticaret Sitesi</p>
-<p><b>Referans Uygulaması:  </b>nike.com.tr</p>
 <p><b>Grup Adı:  </b> BEEMB </p>
 <p><b>Proje Ekibi:  </b> Berkay Yılmaz, Mehmet Emre Arıcan</p>
 <br>
